@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mymap="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="My_pro2.MainPage">
+    <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame>
+                <SearchBar  Grid.Column="0" Grid.Row="0" Margin="20"
+                Placeholder="Search for Store Location" 
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="15"
+                PlaceholderColor="Gray">
+                </SearchBar>
+            </Frame>
+        <mymap:Map x:Name="mylocalmap" IsShowingUser="True" Grid.Column="0" Grid.Row="1" HeightRequest="400"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"></mymap:Map>
+        </Grid>
+    
+
+</ContentPage>
